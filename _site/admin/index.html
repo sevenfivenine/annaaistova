@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <title>Admin | Anna Aistova</title>
     <meta name="robots" content="noindex, nofollow" />
 </head>
 <body>
-<!-- Mount point for Netlify CMS -->
+<!-- 1. Load the Identity widget -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+    // 2. Initialize Identity early
+    if (window.netlifyIdentity) {
+        window.netlifyIdentity.init();
+    }
+</script>
+
+<!-- 3. Mount point for Netlify CMS -->
 <div id="nc-root"></div>
 
-<!-- Load Netlify CMS -->
+<!-- 4. Load Netlify CMS (which will show the “Login with Netlify Identity” button) -->
 <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </body>
 </html>

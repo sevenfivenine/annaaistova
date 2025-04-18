@@ -8,26 +8,17 @@
 <body>
 <!-- 1. Load the Identity widget -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-<!-- 2. Mount point for Netlify CMS -->
-<div id="nc-root"></div>
-
-<!-- 3. Initialize Identity and immediately open signup/login -->
 <script>
+    // 2. Initialize Identity early
     if (window.netlifyIdentity) {
-        // open signup modal by default (setPassword too in invite flow)
-        window.netlifyIdentity.init({ open_signup: true });
-        // if a user clicks “Login” or “Sign up” it’ll show the right form
-        window.netlifyIdentity.on('init', user => {
-            if (!user) {
-                // force open signup (or set-password if token present)
-                window.netlifyIdentity.open('signup');
-            }
-        });
+        window.netlifyIdentity.init();
     }
 </script>
 
-<!-- 4. Load Netlify CMS itself -->
+<!-- 3. Mount point for Netlify CMS -->
+<div id="nc-root"></div>
+
+<!-- 4. Load Netlify CMS (which will show the “Login with Netlify Identity” button) -->
 <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </body>
 </html>
