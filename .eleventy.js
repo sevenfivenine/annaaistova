@@ -3,4 +3,5 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("admin");
     // copy your stylesheet
     eleventyConfig.addPassthroughCopy("styles.css");
+    eleventyConfig.addPassthroughCopy("_redirects");
 };
