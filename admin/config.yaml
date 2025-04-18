@@ -1,0 +1,43 @@
+backend:
+  name: github
+  repo: sevenfivenine/annaaistova
+  branch: main
+  auth_scope: public_repo
+
+media_folder: "admin/images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "bio"
+        label: "Bio"
+        file: "bio.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body",  name: "body",  widget: "markdown" }
+      - name: "resume"
+        label: "Resume"
+        file: "resume.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body",  name: "body",  widget: "markdown" }
+      - name: "schedule"
+        label: "Schedule"
+        file: "schedule.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body",  name: "body",  widget: "markdown" }
+      - name: "media"
+        label: "Media"
+        file: "media.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body",  name: "body",  widget: "markdown" }
+      - name: "contact"
+        label: "Contact"
+        file: "contact.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body",  name: "body",  widget: "markdown" }
