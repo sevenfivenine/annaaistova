@@ -1,0 +1,11 @@
+# Tell Netlify where to build & publish
+[build]
+  command   = "npm run build"
+  publish   = "_site"
+
+# Ensure the /admin SPA always loads index.html
+[[redirects]]
+  from     = "/admin/*"
+  to       = "/admin/index.html"
+  status   = 200
+  force    = true
