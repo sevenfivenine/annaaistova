@@ -6,19 +6,17 @@
     <meta name="robots" content="noindex, nofollow" />
 </head>
 <body>
-<!-- 1. Load the Identity widget -->
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
-    // 2. Initialize Identity early
-    if (window.netlifyIdentity) {
-        window.netlifyIdentity.init();
+    // 1. Simple client‑side gate
+    const SECRET = "opera123";  // ← set your password here
+    const entry = prompt("Enter admin password:");
+    if (entry !== SECRET) {
+        document.body.innerHTML = "<h1>Access denied</h1>";
+        throw new Error("Invalid admin password");
     }
 </script>
 
-<!-- 3. Mount point for Netlify CMS -->
-<div id="nc-root"></div>
-
-<!-- 4. Load Netlify CMS (which will show the “Login with Netlify Identity” button) -->
+<!-- 2. Load Netlify CMS once unlocked -->
 <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </body>
 </html>
