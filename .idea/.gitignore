@@ -6,3 +6,13 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
+# Eleventy output
+_site/
+
+# Node deps
+node_modules/
+
+# Editor or OS files
+.DS_Store
+.idea/
