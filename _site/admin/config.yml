@@ -34,8 +34,3 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body",  name: "body",  widget: "markdown" }
       - name: "contact"
-        label: "Contact"
-        file: "contact.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body",  name: "body",  widget: "markdown" }
