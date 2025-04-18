@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: sevenfivenine/annaaistova
+  name: git-gateway
   branch: main
 
 media_folder: "admin/images"
