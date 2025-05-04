@@ -3,20 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <title>Admin | Anna Aistova</title>
-    <meta name="robots" content="noindex, nofollow" />
 </head>
 <body>
-<script>
-    // 🔒 Simple client‑side gate
-    const SECRET = "opera123";  // ← change this to your chosen password
-    const entry  = prompt("Enter admin password:");
-    if (entry !== SECRET) {
-        document.body.innerHTML = "<h1 style='text-align:center;margin:2rem'>Access denied</h1>";
-        throw new Error("Invalid admin password");
-    }
-</script>
 
-<!-- Load Netlify CMS once unlocked -->
+<!-- 3. Load Netlify CMS without any login prompt -->
 <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </body>
 </html>
